@@ -43,6 +43,12 @@ namespace TechJobsMVC.Data
                 jobs = FindByValue(value);
                 return jobs;
             }
+
+            if (value == "")
+            {
+                return FindAll();
+            }
+
             foreach (Job job in AllJobs)
             {
 
